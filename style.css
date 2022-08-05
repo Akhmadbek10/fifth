@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 500px;
+    height: 500px;
+    background-color: bisque;
+    border-radius: 10px;
+}
+
+.container:hover .box {
+
+    animation: myanimation 4s forwards infinite;
+}
+
+/* linear, ease, ease-in, ease-in-out */
+.box {
+    width: 70px;
+    height: 70px;
+    background-color: brown;
+    border-radius: 50%;
+    /* animation: myanimation 1s forwards ; */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+
+@keyframes myanimation {
+
+    form {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(200px);
+    }
+    0% {
+        transform: translatex(0);
+    }
+
+    25% {
+        transform: translatex(430px);
+    }
+
+    50% {
+        transform: translateY(430px) translateX(430px);
+    }
+
+    75% {
+        transform: translateX(0px) translateY(430px);
+    }
+
+    100% {
+        transform: translateX(0px) translateY(0px);
+    }
+}
+
+
+.inbox {
+    width: 20%;
+    height: 100%;
+    background-color: #fff;
+    animation: myanimation2 3s forwards infinite;
+}
+
+@keyframes myanimation2 {
+    form {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(-1800deg);
+    }
+}
